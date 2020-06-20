@@ -1,0 +1,98 @@
+<html>
+	<head>
+		<title>Calculator</title>
+
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+    <style>
+      .calculator {
+        margin-top: 40px;
+        border: solid 1px #000;
+        padding: 20px;
+        background-color: #2E2E2E;
+        border-radius: 10px;
+        box-shadow: 1px 1px 5px #000;
+      }
+
+      .btn {
+        width: 60px;
+        height: 50px;
+        margin: 5px;
+        box-shadow: 1px 1px 1px #000;
+      }
+
+      .clear {
+        width: 130px;
+      }
+
+      .enter {
+        height: 110px;
+      }
+
+      .zero {
+        width: 130px;
+      }
+
+      .result {
+        text-align: right;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-bottom: 20px;
+        border: solid 1px #000;
+        box-shadow: 1px 1px 1px #000;
+      }
+
+    </style>
+	</head>
+
+  <body style="background: #D9D9D9">
+
+    <div class="container">
+      <div class="row">
+        <div class="col d-flex justify-content-center">
+          <br />
+
+          <div class="calculator">
+            <input type="text" id="result" class="form-control result" placeholder="0" disabled="disabled" />
+            
+            <div class="row">
+              <button onclick="calculator('action', 'c')" type="button" class="btn btn-dark btn-lg clear font-weight-light">C</button>
+              <button onclick="calculator('action', '/')" type="button" class="btn btn-dark btn-lg font-weight-light">/</button>
+              <button onclick="calculator('action', '*')" type="button" class="btn btn-dark btn-lg font-weight-light">x</button>
+            </div>
+
+            <div class="row">
+              <button onclick="calculator('number', 7)" type="button" class="btn btn-dark btn-lg font-weight-light">7</button>
+              <button onclick="calculator('number', 8)" type="button" class="btn btn-dark btn-lg font-weight-light">8</button>
+              <button onclick="calculator('number', 9)" type="button" class="btn btn-dark btn-lg font-weight-light">9</button>
+              <button onclick="calculator('action', '-')" type="button" class="btn btn-dark btn-lg font-weight-light">-</button>
+            </div>
+            
+            <div class="row">
+              <button onclick="calculator('number', 4)" type="button" class="btn btn-dark btn-lg font-weight-light">4</button>
+              <button onclick="calculator('number', 5)" type="button" class="btn btn-dark btn-lg font-weight-light">5</button>
+              <button onclick="calculator('number', 6)" type="button" class="btn btn-dark btn-lg font-weight-light">6</button>
+              <button onclick="calculator('action', '+')" type="button" class="btn btn-dark btn-lg font-weight-light">+</button>
+            </div>
+
+            <div class="row">
+              <button onclick="calculator('number', 1)" type="button" class="btn btn-dark btn-lg font-weight-light">1</button>
+              <button onclick="calculator('number', 2)" type="button" class="btn btn-dark btn-lg font-weight-light">2</button>
+              <button onclick="calculator('number', 3)" type="button" class="btn btn-dark btn-lg font-weight-light">3</button>
+              <button onclick="calculator('action', '=')" type="button" class="btn btn-dark btn-lg enter"> = </button>
+            </div>
+
+            <div class="row" style="margin-top: -60px">
+              <button onclick="calculator('number', 0)" type="button" class="btn btn-dark zero btn-lg font-weight-light">0</button>
+              <button onclick="calculator('action', '.')" type="button" class="btn btn-dark btn-lg font-weight-light">.</button>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="calculator.js"></script>    
+  </body>	
+
+</html>
